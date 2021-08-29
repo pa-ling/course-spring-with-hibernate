@@ -29,6 +29,7 @@ class ApplicationContextTest {
 
 
     // If you want to use component scan, add it here!
+    @ComponentScan(basePackages = {"de.oette.course.A05"})
     @Configuration
     static class TestConfig {
 
