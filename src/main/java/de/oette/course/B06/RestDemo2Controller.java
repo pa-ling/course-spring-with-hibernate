@@ -14,23 +14,32 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class RestDemo2Controller {
 
-    private String temp = "";
+    private Data temp = new Data();
 
     @GetMapping
-    public String get() {
+    public Data get() {
         return temp;
     }
 
     @PostMapping
+    public Data set(@RequestBody Data newData) {
+        temp = newData;
+        return temp;
+    }
+
     @PutMapping
-    public String set(@RequestParam String newText) {
-        temp += newText;
+    public Data add(@RequestBody Data newData) {
+        temp.text += newData.text;
         return temp;
     }
 
     @DeleteMapping
-    public String delete() {
-        this.temp = "";
+    public Data delete() {
+        this.temp = new Data();
         return temp;
+    }
+
+    public static class Data {
+        public String text;
     }
 }

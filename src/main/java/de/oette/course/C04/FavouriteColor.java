@@ -1,11 +1,9 @@
 package de.oette.course.C04;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "favourite_color_entity")
 public class FavouriteColor {
 
     @Id
