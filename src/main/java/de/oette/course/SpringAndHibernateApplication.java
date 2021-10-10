@@ -1,14 +1,14 @@
 package de.oette.course;
 
+import de.oette.course.F04.MySimpleConfiguration;
+import de.oette.course.F04.SimpleConfiguration;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.Import;
 
 @SuppressWarnings("SpellCheckingInspection")
-@SpringBootApplication
-@ComponentScan(basePackages = {"de.oette.course.C04"})
-@EntityScan(basePackages = {"de.oette.course.C04"})
+@EnableAutoConfiguration
+@MySimpleConfiguration
 public class SpringAndHibernateApplication {
 
 	public static void main(String[] args) {
